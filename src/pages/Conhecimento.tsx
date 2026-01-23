@@ -1,8 +1,10 @@
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, BookOpen, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { searchSchema } from "@/lib/validations";
 
 const articles = [
   {
@@ -76,6 +78,54 @@ const glossaryTerms = [
 ];
 
 export default function Conhecimento() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Sanitize and validate search input
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    
+    // Apply length limit
+    if (value.length > 200) {
+      return;
+    }
+    
+    // Validate and sanitize using zod schema
+    const result = searchSchema.safeParse({ query: value });
+    if (result.success) {
+      setSearchQuery(result.data.query);
+    } else {
+      // Still allow typing but sanitize dangerous characters
+      setSearchQuery(value.replace(/[<>]/g, ""));
+    }
+  };
+
+  // Filter articles based on sanitized search query
+  const filteredArticles = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return articles;
+    }
+    const query = searchQuery.toLowerCase();
+    return articles.filter(
+      (article) =>
+        article.title.toLowerCase().includes(query) ||
+        article.excerpt.toLowerCase().includes(query) ||
+        article.category.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
+
+  // Filter glossary based on sanitized search query
+  const filteredGlossary = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return glossaryTerms;
+    }
+    const query = searchQuery.toLowerCase();
+    return glossaryTerms.filter(
+      (item) =>
+        item.term.toLowerCase().includes(query) ||
+        item.definition.toLowerCase().includes(query)
+    );
+  }, [searchQuery]);
+
   return (
     <Layout>
       {/* Hero */}
@@ -103,6 +153,10 @@ export default function Conhecimento() {
             <Input 
               placeholder="Buscar artigos e termos..." 
               className="pl-10"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              maxLength={200}
+              aria-label="Buscar artigos e termos"
             />
           </div>
         </div>
@@ -126,35 +180,41 @@ export default function Conhecimento() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {articles.map((article) => (
-              <Link
-                key={article.id}
-                to={`/conhecimento/artigos/${article.id}`}
-                className="group card-institutional flex flex-col"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <Badge variant="secondary">{article.category}</Badge>
-                  <span className="text-xs text-muted-foreground">{article.readTime}</span>
-                </div>
-                <h3 className="font-serif text-xl mb-3 group-hover:text-primary transition-colors">
-                  {article.title}
-                </h3>
-                <p className="text-sm text-muted-foreground flex-1">
-                  {article.excerpt}
-                </p>
-                <div className="mt-6 flex items-center justify-between">
-                  <Badge variant="outline" className="text-xs">
-                    {article.level}
-                  </Badge>
-                  <span className="text-sm text-primary flex items-center">
-                    Ler mais
-                    <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          {filteredArticles.length === 0 ? (
+            <p className="text-muted-foreground text-center py-12">
+              Nenhum artigo encontrado para "{searchQuery}"
+            </p>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredArticles.map((article) => (
+                <Link
+                  key={article.id}
+                  to={`/conhecimento/artigos/${article.id}`}
+                  className="group card-institutional flex flex-col"
+                >
+                  <div className="flex items-center gap-2 mb-4">
+                    <Badge variant="secondary">{article.category}</Badge>
+                    <span className="text-xs text-muted-foreground">{article.readTime}</span>
+                  </div>
+                  <h3 className="font-serif text-xl mb-3 group-hover:text-primary transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground flex-1">
+                    {article.excerpt}
+                  </p>
+                  <div className="mt-6 flex items-center justify-between">
+                    <Badge variant="outline" className="text-xs">
+                      {article.level}
+                    </Badge>
+                    <span className="text-sm text-primary flex items-center">
+                      Ler mais
+                      <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -172,31 +232,37 @@ export default function Conhecimento() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {glossaryTerms.map((item) => (
-              <div 
-                key={item.term}
-                className="bg-background p-6 rounded-sm"
-              >
-                <h3 className="font-serif text-xl mb-3 text-primary">
-                  {item.term}
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  {item.definition}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {item.related.map((rel) => (
-                    <span 
-                      key={rel}
-                      className="text-xs px-2 py-1 bg-muted rounded-sm text-muted-foreground"
-                    >
-                      {rel}
-                    </span>
-                  ))}
+          {filteredGlossary.length === 0 ? (
+            <p className="text-muted-foreground text-center py-12">
+              Nenhum termo encontrado para "{searchQuery}"
+            </p>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-6">
+              {filteredGlossary.map((item) => (
+                <div 
+                  key={item.term}
+                  className="bg-background p-6 rounded-sm"
+                >
+                  <h3 className="font-serif text-xl mb-3 text-primary">
+                    {item.term}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {item.definition}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.related.map((rel) => (
+                      <span 
+                        key={rel}
+                        className="text-xs px-2 py-1 bg-muted rounded-sm text-muted-foreground"
+                      >
+                        {rel}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
           <div className="text-center mt-12">
             <Link 
