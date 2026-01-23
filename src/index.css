@@ -2,95 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* 
+  INSTITUTO ETNOBOTÂNICA - Design System
+  Premium Institutional Bio-Tech Aesthetic
+  All colors in HSL format
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Palette - Organic & Scientific */
+    --background: 45 30% 97%;
+    --foreground: 160 15% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 45 25% 95%;
+    --card-foreground: 160 15% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 45 30% 97%;
+    --popover-foreground: 160 15% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Forest Green */
+    --primary: 158 35% 18%;
+    --primary-foreground: 45 30% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Earth */
+    --secondary: 35 25% 88%;
+    --secondary-foreground: 160 15% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft Organic */
+    --muted: 45 15% 92%;
+    --muted-foreground: 160 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Amber Gold */
+    --accent: 38 70% 50%;
+    --accent-foreground: 160 15% 12%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 45 30% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 20% 88%;
+    --input: 45 20% 88%;
+    --ring: 158 35% 18%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom Design Tokens */
+    --forest: 158 35% 18%;
+    --forest-light: 158 25% 28%;
+    --ivory: 45 30% 97%;
+    --ivory-dark: 45 25% 92%;
+    --earth: 35 25% 75%;
+    --earth-dark: 35 20% 45%;
+    --gold: 38 70% 50%;
+    --gold-light: 38 60% 65%;
+    --charcoal: 160 15% 12%;
+    --charcoal-light: 160 10% 25%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 45 25% 95%;
+    --sidebar-foreground: 160 15% 12%;
+    --sidebar-primary: 158 35% 18%;
+    --sidebar-primary-foreground: 45 30% 97%;
+    --sidebar-accent: 45 20% 90%;
+    --sidebar-accent-foreground: 160 15% 12%;
+    --sidebar-border: 45 20% 88%;
+    --sidebar-ring: 158 35% 18%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 160 20% 8%;
+    --foreground: 45 25% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 160 18% 12%;
+    --card-foreground: 45 25% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 160 18% 12%;
+    --popover-foreground: 45 25% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 158 30% 55%;
+    --primary-foreground: 160 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 160 15% 18%;
+    --secondary-foreground: 45 25% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 160 15% 18%;
+    --muted-foreground: 45 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 38 60% 55%;
+    --accent-foreground: 160 20% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 45 25% 92%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 160 15% 20%;
+    --input: 160 15% 20%;
+    --ring: 158 30% 55%;
+
+    --forest: 158 30% 55%;
+    --forest-light: 158 25% 65%;
+    --ivory: 45 25% 92%;
+    --ivory-dark: 45 20% 80%;
+    --earth: 35 20% 35%;
+    --earth-dark: 35 15% 25%;
+    --gold: 38 60% 55%;
+    --gold-light: 38 50% 65%;
+    --charcoal: 45 25% 92%;
+    --charcoal-light: 45 20% 75%;
+
+    --sidebar-background: 160 18% 10%;
+    --sidebar-foreground: 45 25% 92%;
+    --sidebar-primary: 158 30% 55%;
+    --sidebar-primary-foreground: 160 20% 8%;
+    --sidebar-accent: 160 15% 15%;
+    --sidebar-accent-foreground: 45 25% 92%;
+    --sidebar-border: 160 15% 18%;
+    --sidebar-ring: 158 30% 55%;
   }
 }
 
@@ -99,7 +126,143 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-sm font-medium;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:opacity-90;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary px-6 py-3 rounded-sm font-medium;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .btn-ghost {
+    @apply text-primary px-4 py-2 font-medium;
+    @apply transition-all duration-300 ease-out;
+  }
+
+  /* Card Styles */
+  .card-institutional {
+    @apply bg-card rounded-sm p-8;
+    @apply transition-all duration-300 ease-out;
+    box-shadow: 0 4px 20px -4px rgba(30, 45, 35, 0.08);
+  }
+
+  .card-institutional:hover {
+    box-shadow: 0 12px 40px -12px rgba(30, 45, 35, 0.12);
+  }
+
+  /* Text Styles */
+  .text-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    @apply text-4xl md:text-5xl lg:text-6xl font-medium leading-tight;
+  }
+
+  .text-headline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    @apply text-2xl md:text-3xl font-medium;
+  }
+
+  .text-body-large {
+    @apply text-lg leading-relaxed text-muted-foreground;
+  }
+
+  .text-caption {
+    @apply text-sm uppercase tracking-widest text-muted-foreground;
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-6;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  /* Divider */
+  .divider-gold {
+    @apply w-16 h-px bg-accent mx-auto;
+  }
+
+  /* Link Styles */
+  .link-subtle {
+    @apply text-foreground transition-colors duration-300;
+    @apply hover:text-primary;
+  }
+
+  .link-underline {
+    @apply relative text-foreground;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-primary;
+    @apply transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Delay Utilities */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
 }
