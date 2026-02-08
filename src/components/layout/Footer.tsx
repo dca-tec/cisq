@@ -29,10 +29,10 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src={cisqLogo} alt="CISQ Logo" className="h-16 w-16 object-contain" />
+              <img src={cisqLogo} alt="CISQ Logo" className="h-20 w-20 object-contain" />
               <div>
                 <span className="font-serif text-xl">CISQ</span>
-                <span className="block text-[10px] opacity-70 tracking-widest uppercase leading-tight">
+                <span className="block text-[10px] opacity-70 tracking-widest uppercase leading-tight max-w-[180px] text-justify">
                   Centro de Inteligência em Saúde Quântica
                 </span>
               </div>
