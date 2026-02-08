@@ -29,13 +29,13 @@ export function Header() {
       <nav className="container-wide">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <img src={cisqLogo} alt="CISQ Logo" className="h-20 w-20 object-contain" />
+          <Link to="/" className="flex items-center gap-4 group">
+            <img src={cisqLogo} alt="CISQ Logo" className="h-24 w-24 object-contain" />
             <div className="hidden sm:block">
-              <span className="font-serif text-xl text-foreground group-hover:text-primary transition-colors">
+              <span className="font-serif text-2xl font-bold bg-gradient-to-r from-[hsl(195,80%,50%)] via-[hsl(210,70%,65%)] to-[hsl(195,80%,50%)] bg-clip-text text-transparent drop-shadow-sm">
                 CISQ
               </span>
-              <span className="block text-[10px] text-muted-foreground tracking-widest uppercase leading-tight max-w-[180px] text-justify">
+              <span className="block text-[10px] tracking-widest uppercase leading-tight max-w-[180px] text-justify bg-gradient-to-r from-[hsl(195,60%,45%)] via-[hsl(210,50%,60%)] to-[hsl(200,70%,50%)] bg-clip-text text-transparent font-semibold">
                 Centro de Inteligência em Saúde Quântica
               </span>
             </div>
