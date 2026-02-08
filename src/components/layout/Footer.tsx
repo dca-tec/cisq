@@ -29,10 +29,12 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-4 mb-6">
-              <img src={cisqLogo} alt="CISQ Logo" className="h-24 w-24 object-contain" style={{ imageRendering: 'auto' }} />
+              <img src={cisqLogo} alt="CISQ Logo" className="h-24 w-24 object-contain" />
               <div>
-                <span className="glass-brand-title-light">CISQ</span>
-                <span className="glass-brand-subtitle-light">
+                <span className="font-serif text-2xl font-bold bg-gradient-to-r from-[hsl(195,80%,70%)] via-[hsl(210,70%,80%)] to-[hsl(195,80%,70%)] bg-clip-text text-transparent">
+                  CISQ
+                </span>
+                <span className="block text-[10px] tracking-widest uppercase leading-tight max-w-[180px] text-justify bg-gradient-to-r from-[hsl(195,60%,65%)] via-[hsl(210,50%,78%)] to-[hsl(200,70%,68%)] bg-clip-text text-transparent font-semibold">
                   Centro de Inteligência em Saúde Quântica
                 </span>
               </div>
