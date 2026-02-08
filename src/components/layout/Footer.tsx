@@ -29,7 +29,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src={cisqLogo} alt="CISQ Logo" className="h-12 w-12 object-contain" />
+              <img src={cisqLogo} alt="CISQ Logo" className="h-16 w-16 object-contain" />
               <div>
                 <span className="font-serif text-xl">CISQ</span>
                 <span className="block text-xs opacity-70 tracking-widest uppercase">

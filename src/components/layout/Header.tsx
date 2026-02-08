@@ -30,7 +30,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={cisqLogo} alt="CISQ Logo" className="h-12 w-12 object-contain" />
+            <img src={cisqLogo} alt="CISQ Logo" className="h-16 w-16 object-contain" />
             <div className="hidden sm:block">
               <span className="font-serif text-xl text-foreground group-hover:text-primary transition-colors">
                 CISQ
