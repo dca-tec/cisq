@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User, Calendar, ShoppingBag } from "lucide-react";
+import cisqLogo from "@/assets/cisq-logo.png";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -29,15 +30,13 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-serif text-lg">E</span>
-            </div>
+            <img src={cisqLogo} alt="CISQ Logo" className="h-12 w-12 object-contain" />
             <div className="hidden sm:block">
               <span className="font-serif text-xl text-foreground group-hover:text-primary transition-colors">
-                Etnobotânica
+                CISQ
               </span>
               <span className="block text-xs text-muted-foreground tracking-widest uppercase">
-                Instituto de Biosciência
+                Saúde Quântica
               </span>
             </div>
           </Link>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
+import cisqLogo from "@/assets/cisq-logo.png";
 
 const footerLinks = {
   institucional: [
@@ -28,13 +29,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center border border-primary-foreground/20">
-                <span className="font-serif text-lg">E</span>
-              </div>
+              <img src={cisqLogo} alt="CISQ Logo" className="h-12 w-12 object-contain" />
               <div>
-                <span className="font-serif text-xl">Etnobotânica</span>
+                <span className="font-serif text-xl">CISQ</span>
                 <span className="block text-xs opacity-70 tracking-widest uppercase">
-                  Instituto de Biosciência
+                  Saúde Quântica
                 </span>
               </div>
             </Link>
@@ -111,7 +110,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-70">
-            <p>© 2024 Instituto Etnobotânica. Todos os direitos reservados.</p>
+            <p>© 2024 CISQ — Centro de Inteligência em Saúde Quântica. Todos os direitos reservados.</p>
             <div className="flex gap-6">
               <Link to="/privacidade" className="hover:opacity-100 transition-opacity">
                 Política de Privacidade
