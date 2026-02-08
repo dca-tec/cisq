@@ -35,8 +35,8 @@ export function Header() {
               <span className="font-serif text-xl text-foreground group-hover:text-primary transition-colors">
                 CISQ
               </span>
-              <span className="block text-xs text-muted-foreground tracking-widest uppercase">
-                Saúde Quântica
+              <span className="block text-[10px] text-muted-foreground tracking-widest uppercase leading-tight">
+                Centro de Inteligência em Saúde Quântica
               </span>
             </div>
           </Link>

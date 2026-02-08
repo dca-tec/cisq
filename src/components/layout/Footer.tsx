@@ -32,8 +32,8 @@ export function Footer() {
               <img src={cisqLogo} alt="CISQ Logo" className="h-16 w-16 object-contain" />
               <div>
                 <span className="font-serif text-xl">CISQ</span>
-                <span className="block text-xs opacity-70 tracking-widest uppercase">
-                  Saúde Quântica
+                <span className="block text-[10px] opacity-70 tracking-widest uppercase leading-tight">
+                  Centro de Inteligência em Saúde Quântica
                 </span>
               </div>
             </Link>
