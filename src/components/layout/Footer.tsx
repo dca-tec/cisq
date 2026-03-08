@@ -28,13 +28,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-4 mb-6">
-              <img src={cisqLogo} alt="CISQ Logo" className="h-24 w-24 object-contain" />
-              <div>
-                <span className="font-serif text-2xl font-bold bg-gradient-to-r from-[hsl(195,80%,70%)] via-[hsl(210,70%,80%)] to-[hsl(195,80%,70%)] bg-clip-text text-transparent">
+            <Link to="/" className="flex items-center gap-3 mb-6 group">
+              <img src={cisqLogo} alt="CISQ Logo" className="h-20 w-20 object-contain transition-transform duration-500 group-hover:scale-105" />
+              <div className="flex flex-col justify-center">
+                <span className="font-serif text-3xl font-bold text-primary-foreground drop-shadow-sm leading-none mb-1">
                   CISQ
                 </span>
-                <span className="block text-[10px] tracking-widest uppercase leading-tight max-w-[180px] text-justify bg-gradient-to-r from-[hsl(195,60%,65%)] via-[hsl(210,50%,78%)] to-[hsl(200,70%,68%)] bg-clip-text text-transparent font-semibold">
+                <span className="block text-[10px] tracking-[0.15em] uppercase leading-tight max-w-[180px] text-justify text-primary-foreground/80 font-medium">
                   Centro de Inteligência em Saúde Quântica
                 </span>
               </div>

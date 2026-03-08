@@ -13,6 +13,7 @@ const protocols = [
     description: "Programa introdutório para reequilíbrio básico. Ideal para quem está começando sua jornada de autoconhecimento biológico.",
     price: 97,
     isPaid: true,
+    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800",
     features: ["Guia diário completo", "Lista de alimentos", "Práticas de consciência", "Suporte por email"]
   },
   {
@@ -23,6 +24,7 @@ const protocols = [
     description: "Programa aprofundado para suporte aos processos naturais de desintoxicação e regeneração celular.",
     price: 197,
     isPaid: true,
+    image: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&q=80&w=800",
     features: ["Protocolo detalhado", "Receitas exclusivas", "Monitoramento de sintomas", "Consulta de orientação"]
   },
   {
@@ -33,6 +35,7 @@ const protocols = [
     description: "O programa mais completo para mudança profunda de padrões biológicos e comportamentais.",
     price: 397,
     isPaid: true,
+    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800",
     features: ["Programa completo", "Acompanhamento semanal", "Protocolos personalizados", "Comunidade exclusiva"]
   },
 ];
@@ -93,24 +96,39 @@ export default function Protocolos() {
             {protocols.map((protocol, index) => (
               <div 
                 key={protocol.id}
-                className={`relative bg-card rounded-sm overflow-hidden transition-all duration-300 hover:shadow-elevated ${
+                className={`group relative bg-card rounded-sm overflow-hidden transition-all duration-300 hover:shadow-elevated flex flex-col ${
                   index === 2 ? 'ring-2 ring-accent' : ''
                 }`}
               >
                 {index === 2 && (
-                  <div className="absolute top-0 right-0 bg-accent text-accent-foreground px-4 py-1 text-xs font-medium">
+                  <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 text-xs font-medium rounded-full z-10 shadow-sm">
                     Mais Completo
                   </div>
                 )}
-                <div className="p-8">
+                
+                {/* Image Gallery/Cover */}
+                <div className="aspect-[4/3] w-full overflow-hidden relative bg-muted">
+                  <img 
+                    src={protocol.image} 
+                    alt={protocol.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
+                  <div className="absolute bottom-4 left-4 flex items-center gap-2">
+                    <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm hover:bg-background/90 text-foreground">
+                      {protocol.type}
+                    </Badge>
+                  </div>
+                </div>
+
+                <div className="p-8 flex flex-col flex-1">
                   <div className="flex items-center gap-2 mb-4">
                     <Clock className="h-4 w-4 text-muted-foreground" />
                     <span className="text-sm text-muted-foreground">{protocol.duration}</span>
-                    <Badge variant="outline" className="ml-auto">{protocol.type}</Badge>
                   </div>
                   
-                  <h3 className="font-serif text-xl mb-3">{protocol.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-6">
+                  <h3 className="font-serif text-xl mb-3 group-hover:text-primary transition-colors">{protocol.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-6 flex-1">
                     {protocol.description}
                   </p>
 
@@ -123,7 +141,7 @@ export default function Protocolos() {
                     ))}
                   </ul>
 
-                  <div className="pt-6 border-t border-border">
+                  <div className="pt-6 border-t border-border mt-auto">
                     <div className="flex items-end justify-between mb-4">
                       <span className="font-serif text-3xl text-foreground">
                         R$ {protocol.price}
@@ -132,10 +150,10 @@ export default function Protocolos() {
                         acesso vitalício
                       </span>
                     </div>
-                    <Button className="w-full" asChild>
+                    <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all" asChild>
                       <Link to={`/protocolos/${protocol.id}`}>
                         Adquirir Protocolo
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Link>
                     </Button>
                   </div>
