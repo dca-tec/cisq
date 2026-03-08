@@ -96,24 +96,39 @@ export default function Protocolos() {
             {protocols.map((protocol, index) => (
               <div 
                 key={protocol.id}
-                className={`relative bg-card rounded-sm overflow-hidden transition-all duration-300 hover:shadow-elevated ${
+                className={`group relative bg-card rounded-sm overflow-hidden transition-all duration-300 hover:shadow-elevated flex flex-col ${
                   index === 2 ? 'ring-2 ring-accent' : ''
                 }`}
               >
                 {index === 2 && (
-                  <div className="absolute top-0 right-0 bg-accent text-accent-foreground px-4 py-1 text-xs font-medium">
+                  <div className="absolute top-4 right-4 bg-accent text-accent-foreground px-3 py-1 text-xs font-medium rounded-full z-10 shadow-sm">
                     Mais Completo
                   </div>
                 )}
-                <div className="p-8">
+                
+                {/* Image Gallery/Cover */}
+                <div className="aspect-[4/3] w-full overflow-hidden relative bg-muted">
+                  <img 
+                    src={protocol.image} 
+                    alt={protocol.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
+                  <div className="absolute bottom-4 left-4 flex items-center gap-2">
+                    <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm hover:bg-background/90 text-foreground">
+                      {protocol.type}
+                    </Badge>
+                  </div>
+                </div>
+
+                <div className="p-8 flex flex-col flex-1">
                   <div className="flex items-center gap-2 mb-4">
                     <Clock className="h-4 w-4 text-muted-foreground" />
                     <span className="text-sm text-muted-foreground">{protocol.duration}</span>
-                    <Badge variant="outline" className="ml-auto">{protocol.type}</Badge>
                   </div>
                   
-                  <h3 className="font-serif text-xl mb-3">{protocol.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-6">
+                  <h3 className="font-serif text-xl mb-3 group-hover:text-primary transition-colors">{protocol.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-6 flex-1">
                     {protocol.description}
                   </p>
 
