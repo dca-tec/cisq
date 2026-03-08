@@ -29,13 +29,13 @@ export function Header() {
       <nav className="container-wide">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-4 group">
-            <img src={cisqLogo} alt="CISQ Logo" className="h-24 w-24 object-contain" />
-            <div className="hidden sm:block">
-              <span className="font-serif text-2xl font-bold bg-gradient-to-r from-[hsl(195,80%,50%)] via-[hsl(210,70%,65%)] to-[hsl(195,80%,50%)] bg-clip-text text-transparent drop-shadow-sm">
+          <Link to="/" className="flex items-center gap-3 group">
+            <img src={cisqLogo} alt="CISQ Logo" className="h-16 w-16 object-contain transition-transform duration-500 group-hover:scale-105" />
+            <div className="hidden sm:flex flex-col justify-center">
+              <span className="font-serif text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent drop-shadow-sm leading-none mb-0.5">
                 CISQ
               </span>
-              <span className="block text-[10px] tracking-widest uppercase leading-tight max-w-[180px] text-justify bg-gradient-to-r from-[hsl(195,60%,45%)] via-[hsl(210,50%,60%)] to-[hsl(200,70%,50%)] bg-clip-text text-transparent font-semibold">
+              <span className="block text-[9px] tracking-[0.15em] uppercase leading-tight max-w-[160px] text-justify bg-gradient-to-r from-accent to-yellow-600 bg-clip-text text-transparent font-bold">
                 Centro de Inteligência em Saúde Quântica
               </span>
             </div>

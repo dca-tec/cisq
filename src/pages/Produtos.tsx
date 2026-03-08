@@ -29,7 +29,7 @@ const products = [
     categoryName: "Sistema Nervoso",
     description: "Fórmula para suporte à homeostase do sistema nervoso autônomo. Compostos adaptogênicos selecionados.",
     price: 189,
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1618410320928-25228d811631?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const products = [
     categoryName: "Sistema Digestivo",
     description: "Compostos selecionados para apoio à função hepatobiliar e processos de desintoxicação natural.",
     price: 159,
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1608228068998-5bd0a880ee1f?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const products = [
     categoryName: "Sistema Urinário",
     description: "Suporte natural ao equilíbrio hídrico, função renal e manutenção da pressão osmótica.",
     price: 145,
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1550605336-1216503c53ea?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ const products = [
     categoryName: "Sistema Imunológico",
     description: "Complexo de beta-glucanos e adaptógenos para suporte à resposta imune equilibrada.",
     price: 210,
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ const products = [
     categoryName: "Sistema Endócrino",
     description: "Suporte à regulação hormonal natural através de fitoquímicos específicos.",
     price: 195,
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1564277352822-777e3bd32832?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 6,
@@ -74,7 +74,7 @@ const products = [
     categoryName: "Sistema Circulatório",
     description: "Compostos para suporte à função cardiovascular e fluidez sanguínea.",
     price: 175,
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1615397323215-62df860cc448?auto=format&fit=crop&q=80&w=800"
   },
 ];
 

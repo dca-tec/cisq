@@ -9,7 +9,7 @@ const featuredProducts = [
     category: "Sistema Nervoso",
     description: "Fórmula para suporte à homeostase do sistema nervoso autônomo.",
     price: "R$ 189,00",
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1618410320928-25228d811631?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const featuredProducts = [
     category: "Sistema Digestivo",
     description: "Compostos selecionados para apoio à função hepatobiliar.",
     price: "R$ 159,00",
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1608228068998-5bd0a880ee1f?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const featuredProducts = [
     category: "Sistema Urinário",
     description: "Suporte natural ao equilíbrio hídrico e função renal.",
     price: "R$ 145,00",
-    image: "/placeholder.svg"
+    image: "https://images.unsplash.com/photo-1550605336-1216503c53ea?auto=format&fit=crop&q=80&w=800"
   }
 ];
 

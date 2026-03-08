@@ -141,7 +141,7 @@ export default function Protocolos() {
                     ))}
                   </ul>
 
-                  <div className="pt-6 border-t border-border">
+                  <div className="pt-6 border-t border-border mt-auto">
                     <div className="flex items-end justify-between mb-4">
                       <span className="font-serif text-3xl text-foreground">
                         R$ {protocol.price}
@@ -150,10 +150,10 @@ export default function Protocolos() {
                         acesso vitalício
                       </span>
                     </div>
-                    <Button className="w-full" asChild>
+                    <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all" asChild>
                       <Link to={`/protocolos/${protocol.id}`}>
                         Adquirir Protocolo
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Link>
                     </Button>
                   </div>
