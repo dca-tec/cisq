@@ -13,6 +13,7 @@ const protocols = [
     description: "Programa introdutório para reequilíbrio básico. Ideal para quem está começando sua jornada de autoconhecimento biológico.",
     price: 97,
     isPaid: true,
+    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800",
     features: ["Guia diário completo", "Lista de alimentos", "Práticas de consciência", "Suporte por email"]
   },
   {
@@ -23,6 +24,7 @@ const protocols = [
     description: "Programa aprofundado para suporte aos processos naturais de desintoxicação e regeneração celular.",
     price: 197,
     isPaid: true,
+    image: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&q=80&w=800",
     features: ["Protocolo detalhado", "Receitas exclusivas", "Monitoramento de sintomas", "Consulta de orientação"]
   },
   {
@@ -33,6 +35,7 @@ const protocols = [
     description: "O programa mais completo para mudança profunda de padrões biológicos e comportamentais.",
     price: 397,
     isPaid: true,
+    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800",
     features: ["Programa completo", "Acompanhamento semanal", "Protocolos personalizados", "Comunidade exclusiva"]
   },
 ];
