@@ -35,7 +35,7 @@ export function Header() {
               <span className="font-serif text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent drop-shadow-sm leading-none mb-0.5">
                 CISQ
               </span>
-              <span className="block text-[9px] tracking-[0.15em] uppercase leading-tight max-w-[160px] text-justify bg-gradient-to-r from-accent to-yellow-600 bg-clip-text text-transparent font-bold">
+              <span className="block text-[9px] tracking-[0.15em] uppercase leading-tight max-w-[160px] text-justify text-accent font-bold">
                 Centro de Inteligência em Saúde Quântica
               </span>
             </div>
