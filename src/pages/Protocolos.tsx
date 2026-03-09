@@ -4,6 +4,10 @@ import { ArrowRight, Clock, FileText, Lock, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
+import imgReset from "@/assets/protocolo-reset-7dias.jpg";
+import imgDetox from "@/assets/protocolo-detox-14dias.jpg";
+import imgTransformacao from "@/assets/protocolo-transformacao-30dias.jpg";
+
 const protocols = [
   {
     id: 1,
