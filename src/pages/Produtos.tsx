@@ -11,6 +11,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import imgEquilibrio from "@/assets/produto-equilibrio-celular.jpg";
+import imgTropismo from "@/assets/produto-tropismo-hepatico.jpg";
+import imgOsmorregulador from "@/assets/produto-osmorregulador-renal.jpg";
+import imgImunomodulador from "@/assets/produto-imunomodulador.jpg";
+import imgEndocrino from "@/assets/produto-regulador-endocrino.jpg";
+import imgVasoequilibrio from "@/assets/produto-vasoequilibrio.jpg";
+
 const categories = [
   { id: "all", name: "Todos os Sistemas" },
   { id: "nervous", name: "Sistema Nervoso" },
