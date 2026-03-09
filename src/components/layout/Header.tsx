@@ -30,15 +30,14 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={cisqLogo} alt="CISQ Logo" className="h-16 w-16 object-contain transition-transform duration-500 group-hover:scale-105" />
-            <div className="hidden sm:flex flex-col justify-center">
-              <span className="font-serif text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent drop-shadow-sm leading-none mb-0.5">
-                CISQ
-              </span>
-              <span className="block text-[9px] tracking-[0.15em] uppercase leading-tight max-w-[160px] text-justify text-accent font-bold">
-                Centro de Inteligência em Saúde Quântica
-              </span>
+            <div className="relative">
+              <img src={cisqLogo} alt="CISQ Logo" className="h-14 w-14 object-contain transition-transform duration-500 group-hover:scale-105 relative z-10" />
+              <div className="absolute inset-0 rounded-full bg-[hsl(270,100%,60%)] opacity-40 blur-lg group-hover:opacity-60 transition-opacity duration-500 z-0" />
+              <div className="absolute inset-[-4px] rounded-full bg-[hsl(270,100%,70%)] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500 z-0" />
             </div>
+            <span className="hidden sm:block font-serif text-xl font-bold uppercase tracking-[0.15em] text-accent drop-shadow-sm leading-none">
+              CISQ
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,15 +46,15 @@ export function Header() {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors relative py-2 ${
+                className={`text-xs font-medium uppercase tracking-[0.12em] transition-colors relative py-2 ${
                   isActive(item.href)
-                    ? "text-primary"
+                    ? "text-accent"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.name}
                 {isActive(item.href) && (
-                  <span className="absolute bottom-0 left-0 right-0 h-px bg-primary" />
+                  <span className="absolute bottom-0 left-0 right-0 h-px bg-accent" />
                 )}
               </Link>
             ))}

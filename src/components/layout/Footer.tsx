@@ -28,13 +28,17 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3 mb-6 group">
-              <img src={cisqLogo} alt="CISQ Logo" className="h-20 w-20 object-contain transition-transform duration-500 group-hover:scale-105" />
+            <Link to="/" className="flex items-center gap-3 mb-4 group">
+              <div className="relative">
+                <img src={cisqLogo} alt="CISQ Logo" className="h-20 w-20 object-contain transition-transform duration-500 group-hover:scale-105 relative z-10" />
+                <div className="absolute inset-0 rounded-full bg-[hsl(270,100%,60%)] opacity-40 blur-lg group-hover:opacity-60 transition-opacity duration-500 z-0" />
+                <div className="absolute inset-[-4px] rounded-full bg-[hsl(270,100%,70%)] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500 z-0" />
+              </div>
               <div className="flex flex-col justify-center">
-                <span className="font-serif text-3xl font-bold text-primary-foreground drop-shadow-sm leading-none mb-1">
+                <span className="font-serif text-2xl font-bold uppercase tracking-[0.15em] text-accent drop-shadow-sm leading-none mb-1">
                   CISQ
                 </span>
-                <span className="block text-[10px] tracking-[0.15em] uppercase leading-tight max-w-[180px] text-justify text-primary-foreground/80 font-medium">
+                <span className="block text-[9px] tracking-[0.12em] uppercase leading-tight max-w-[160px] text-justify text-primary-foreground/70 font-medium">
                   Centro de Inteligência em Saúde Quântica
                 </span>
               </div>
@@ -61,7 +65,7 @@ export function Footer() {
 
           {/* Links Columns */}
           <div>
-            <h4 className="font-serif text-lg mb-4">Institucional</h4>
+            <h4 className="font-serif text-lg mb-4 uppercase tracking-wider text-accent">Institucional</h4>
             <ul className="space-y-3">
               {footerLinks.institucional.map((link) => (
                 <li key={link.name}>
@@ -77,7 +81,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg mb-4">Produtos</h4>
+            <h4 className="font-serif text-lg mb-4 uppercase tracking-wider text-accent">Produtos</h4>
             <ul className="space-y-3">
               {footerLinks.produtos.map((link) => (
                 <li key={link.name}>
@@ -93,7 +97,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg mb-4">Recursos</h4>
+            <h4 className="font-serif text-lg mb-4 uppercase tracking-wider text-accent">Recursos</h4>
             <ul className="space-y-3">
               {footerLinks.recursos.map((link) => (
                 <li key={link.name}>
