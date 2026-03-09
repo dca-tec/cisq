@@ -45,7 +45,7 @@ const products = [
     categoryName: "Sistema Digestivo",
     description: "Compostos selecionados para apoio à função hepatobiliar e processos de desintoxicação natural.",
     price: 159,
-    image: "https://images.unsplash.com/photo-1608228068998-5bd0a880ee1f?auto=format&fit=crop&q=80&w=800"
+    image: imgTropismo
   },
   {
     id: 3,
