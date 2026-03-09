@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Phone } from "lucide-react";
-import cisqLogo from "@/assets/cisq-logo.png";
 
 const footerLinks = {
   institucional: [
