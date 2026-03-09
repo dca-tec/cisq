@@ -17,7 +17,7 @@ const protocols = [
     description: "Programa introdutório para reequilíbrio básico. Ideal para quem está começando sua jornada de autoconhecimento biológico.",
     price: 97,
     isPaid: true,
-    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=800",
+    image: imgReset,
     features: ["Guia diário completo", "Lista de alimentos", "Práticas de consciência", "Suporte por email"]
   },
   {
