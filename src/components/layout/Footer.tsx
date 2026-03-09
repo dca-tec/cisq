@@ -28,7 +28,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex flex-col gap-2 mb-4 group">
-              <span className="font-sans text-3xl font-extralight uppercase tracking-[0.3em] text-accent leading-none transition-opacity duration-300 group-hover:opacity-80">
+              <span className="font-sans text-5xl font-extralight uppercase tracking-[0.3em] text-accent leading-none transition-opacity duration-300 group-hover:opacity-80">
                 CISQ
               </span>
               <span className="block text-[9px] tracking-[0.15em] uppercase leading-tight text-primary-foreground/60 font-light">
