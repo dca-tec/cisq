@@ -81,7 +81,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg mb-4">Produtos</h4>
+            <h4 className="font-serif text-lg mb-4 uppercase tracking-wider text-accent">Produtos</h4>
             <ul className="space-y-3">
               {footerLinks.produtos.map((link) => (
                 <li key={link.name}>
