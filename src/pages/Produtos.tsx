@@ -54,7 +54,7 @@ const products = [
     categoryName: "Sistema Urinário",
     description: "Suporte natural ao equilíbrio hídrico, função renal e manutenção da pressão osmótica.",
     price: 145,
-    image: "https://images.unsplash.com/photo-1550605336-1216503c53ea?auto=format&fit=crop&q=80&w=800"
+    image: imgOsmorregulador
   },
   {
     id: 4,
