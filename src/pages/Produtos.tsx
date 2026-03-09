@@ -63,7 +63,7 @@ const products = [
     categoryName: "Sistema Imunológico",
     description: "Complexo de beta-glucanos e adaptógenos para suporte à resposta imune equilibrada.",
     price: 210,
-    image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=800"
+    image: imgImunomodulador
   },
   {
     id: 5,
