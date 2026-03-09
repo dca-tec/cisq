@@ -65,7 +65,7 @@ export function Footer() {
 
           {/* Links Columns */}
           <div>
-            <h4 className="font-serif text-lg mb-4">Institucional</h4>
+            <h4 className="font-serif text-lg mb-4 uppercase tracking-wider text-accent">Institucional</h4>
             <ul className="space-y-3">
               {footerLinks.institucional.map((link) => (
                 <li key={link.name}>
