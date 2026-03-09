@@ -28,13 +28,8 @@ export function Header() {
       <nav className="container-wide">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <img src={cisqLogo} alt="CISQ Logo" className="h-14 w-14 object-contain transition-transform duration-500 group-hover:scale-105 relative z-10" />
-              <div className="absolute inset-0 rounded-full bg-[hsl(270,100%,60%)] opacity-40 blur-lg group-hover:opacity-60 transition-opacity duration-500 z-0" />
-              <div className="absolute inset-[-4px] rounded-full bg-[hsl(270,100%,70%)] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500 z-0" />
-            </div>
-            <span className="hidden sm:block font-serif text-xl font-bold uppercase tracking-[0.15em] text-accent drop-shadow-sm leading-none">
+          <Link to="/" className="flex items-center group">
+            <span className="font-sans text-2xl font-extralight uppercase tracking-[0.3em] text-accent leading-none transition-opacity duration-300 group-hover:opacity-80">
               CISQ
             </span>
           </Link>

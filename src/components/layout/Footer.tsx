@@ -27,20 +27,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-3 mb-4 group">
-              <div className="relative">
-                <img src={cisqLogo} alt="CISQ Logo" className="h-20 w-20 object-contain transition-transform duration-500 group-hover:scale-105 relative z-10" />
-                <div className="absolute inset-0 rounded-full bg-[hsl(270,100%,60%)] opacity-40 blur-lg group-hover:opacity-60 transition-opacity duration-500 z-0" />
-                <div className="absolute inset-[-4px] rounded-full bg-[hsl(270,100%,70%)] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500 z-0" />
-              </div>
-              <div className="flex flex-col justify-center">
-                <span className="font-serif text-2xl font-bold uppercase tracking-[0.15em] text-accent drop-shadow-sm leading-none mb-1">
-                  CISQ
-                </span>
-                <span className="block text-[9px] tracking-[0.12em] uppercase leading-tight max-w-[160px] text-justify text-primary-foreground/70 font-medium">
-                  Centro de Inteligência em Saúde Quântica
-                </span>
-              </div>
+            <Link to="/" className="flex flex-col gap-2 mb-4 group">
+              <span className="font-sans text-3xl font-extralight uppercase tracking-[0.3em] text-accent leading-none transition-opacity duration-300 group-hover:opacity-80">
+                CISQ
+              </span>
+              <span className="block text-[9px] tracking-[0.15em] uppercase leading-tight text-primary-foreground/60 font-light">
+                Centro de Inteligência em Saúde Quântica
+              </span>
             </Link>
             <p className="text-sm opacity-80 leading-relaxed mb-6">
               Laboratório dedicado ao estudo e aplicação de sistemas autogênicos, 
