@@ -59,6 +59,10 @@
     --charcoal: 160 15% 12%;
     --charcoal-light: 160 10% 25%;
 
+    /* Neon UV */
+    --neon-uv: 270 100% 60%;
+    --neon-uv-glow: 270 100% 70%;
+
     /* Sidebar */
     --sidebar-background: 45 25% 95%;
     --sidebar-foreground: 160 15% 12%;

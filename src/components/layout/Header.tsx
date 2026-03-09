@@ -46,15 +46,15 @@ export function Header() {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors relative py-2 ${
+                className={`text-xs font-medium uppercase tracking-[0.12em] transition-colors relative py-2 ${
                   isActive(item.href)
-                    ? "text-primary"
+                    ? "text-accent"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {item.name}
                 {isActive(item.href) && (
-                  <span className="absolute bottom-0 left-0 right-0 h-px bg-primary" />
+                  <span className="absolute bottom-0 left-0 right-0 h-px bg-accent" />
                 )}
               </Link>
             ))}
