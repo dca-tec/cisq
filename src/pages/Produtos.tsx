@@ -36,7 +36,7 @@ const products = [
     categoryName: "Sistema Nervoso",
     description: "Fórmula para suporte à homeostase do sistema nervoso autônomo. Compostos adaptogênicos selecionados.",
     price: 189,
-    image: "https://images.unsplash.com/photo-1618410320928-25228d811631?auto=format&fit=crop&q=80&w=800"
+    image: imgEquilibrio
   },
   {
     id: 2,
