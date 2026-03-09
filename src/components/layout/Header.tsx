@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User, Calendar, ShoppingBag } from "lucide-react";
-import cisqLogo from "@/assets/cisq-logo.png";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
