@@ -72,7 +72,7 @@ const products = [
     categoryName: "Sistema Endócrino",
     description: "Suporte à regulação hormonal natural através de fitoquímicos específicos.",
     price: 195,
-    image: "https://images.unsplash.com/photo-1564277352822-777e3bd32832?auto=format&fit=crop&q=80&w=800"
+    image: imgEndocrino
   },
   {
     id: 6,
