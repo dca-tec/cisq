@@ -28,7 +28,7 @@ const protocols = [
     description: "Programa aprofundado para suporte aos processos naturais de desintoxicação e regeneração celular.",
     price: 197,
     isPaid: true,
-    image: "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&q=80&w=800",
+    image: imgDetox,
     features: ["Protocolo detalhado", "Receitas exclusivas", "Monitoramento de sintomas", "Consulta de orientação"]
   },
   {
