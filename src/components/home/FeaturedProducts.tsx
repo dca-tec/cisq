@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import imgEquilibrio from "@/assets/produto-equilibrio-celular.jpg";
+import imgTropismo from "@/assets/produto-tropismo-hepatico.jpg";
+import imgOsmorregulador from "@/assets/produto-osmorregulador-renal.jpg";
+
 const featuredProducts = [
   {
     id: 1,
