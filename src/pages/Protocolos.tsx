@@ -39,7 +39,7 @@ const protocols = [
     description: "O programa mais completo para mudança profunda de padrões biológicos e comportamentais.",
     price: 397,
     isPaid: true,
-    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=800",
+    image: imgTransformacao,
     features: ["Programa completo", "Acompanhamento semanal", "Protocolos personalizados", "Comunidade exclusiva"]
   },
 ];

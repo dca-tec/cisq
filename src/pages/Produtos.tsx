@@ -81,7 +81,7 @@ const products = [
     categoryName: "Sistema Circulatório",
     description: "Compostos para suporte à função cardiovascular e fluidez sanguínea.",
     price: 175,
-    image: "https://images.unsplash.com/photo-1615397323215-62df860cc448?auto=format&fit=crop&q=80&w=800"
+    image: imgVasoequilibrio
   },
 ];
 

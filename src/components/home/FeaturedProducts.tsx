@@ -29,7 +29,7 @@ const featuredProducts = [
     category: "Sistema Urinário",
     description: "Suporte natural ao equilíbrio hídrico e função renal.",
     price: "R$ 145,00",
-    image: "https://images.unsplash.com/photo-1550605336-1216503c53ea?auto=format&fit=crop&q=80&w=800"
+    image: imgOsmorregulador
   }
 ];
 
