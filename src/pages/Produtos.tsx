@@ -11,6 +11,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import imgEquilibrio from "@/assets/produto-equilibrio-celular.jpg";
+import imgTropismo from "@/assets/produto-tropismo-hepatico.jpg";
+import imgOsmorregulador from "@/assets/produto-osmorregulador-renal.jpg";
+import imgImunomodulador from "@/assets/produto-imunomodulador.jpg";
+import imgEndocrino from "@/assets/produto-regulador-endocrino.jpg";
+import imgVasoequilibrio from "@/assets/produto-vasoequilibrio.jpg";
+
 const categories = [
   { id: "all", name: "Todos os Sistemas" },
   { id: "nervous", name: "Sistema Nervoso" },
@@ -29,7 +36,7 @@ const products = [
     categoryName: "Sistema Nervoso",
     description: "Fórmula para suporte à homeostase do sistema nervoso autônomo. Compostos adaptogênicos selecionados.",
     price: 189,
-    image: "https://images.unsplash.com/photo-1618410320928-25228d811631?auto=format&fit=crop&q=80&w=800"
+    image: imgEquilibrio
   },
   {
     id: 2,
@@ -38,7 +45,7 @@ const products = [
     categoryName: "Sistema Digestivo",
     description: "Compostos selecionados para apoio à função hepatobiliar e processos de desintoxicação natural.",
     price: 159,
-    image: "https://images.unsplash.com/photo-1608228068998-5bd0a880ee1f?auto=format&fit=crop&q=80&w=800"
+    image: imgTropismo
   },
   {
     id: 3,
@@ -47,7 +54,7 @@ const products = [
     categoryName: "Sistema Urinário",
     description: "Suporte natural ao equilíbrio hídrico, função renal e manutenção da pressão osmótica.",
     price: 145,
-    image: "https://images.unsplash.com/photo-1550605336-1216503c53ea?auto=format&fit=crop&q=80&w=800"
+    image: imgOsmorregulador
   },
   {
     id: 4,
@@ -56,7 +63,7 @@ const products = [
     categoryName: "Sistema Imunológico",
     description: "Complexo de beta-glucanos e adaptógenos para suporte à resposta imune equilibrada.",
     price: 210,
-    image: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&q=80&w=800"
+    image: imgImunomodulador
   },
   {
     id: 5,
@@ -65,7 +72,7 @@ const products = [
     categoryName: "Sistema Endócrino",
     description: "Suporte à regulação hormonal natural através de fitoquímicos específicos.",
     price: 195,
-    image: "https://images.unsplash.com/photo-1564277352822-777e3bd32832?auto=format&fit=crop&q=80&w=800"
+    image: imgEndocrino
   },
   {
     id: 6,
@@ -74,7 +81,7 @@ const products = [
     categoryName: "Sistema Circulatório",
     description: "Compostos para suporte à função cardiovascular e fluidez sanguínea.",
     price: 175,
-    image: "https://images.unsplash.com/photo-1615397323215-62df860cc448?auto=format&fit=crop&q=80&w=800"
+    image: imgVasoequilibrio
   },
 ];
 
