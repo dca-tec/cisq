@@ -10,6 +10,7 @@ const navigation = [
   { name: "Instituto", href: "/sobre" },
   { name: "Produtos", href: "/produtos" },
   { name: "Protocolos", href: "/protocolos" },
+  { name: "Treinos", href: "/treinos" },
   { name: "E-books", href: "/ebooks" },
   { name: "Eventos", href: "/eventos" },
   { name: "Conhecimento", href: "/conhecimento" },

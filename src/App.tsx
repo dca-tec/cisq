@@ -39,6 +39,7 @@ const App = () => (
             <Route path="/eventos" element={<Eventos />} />
             <Route path="/ebooks" element={<Ebooks />} />
             <Route path="/carrinho" element={<Carrinho />} />
+            <Route path="/treinos" element={<Treinos />} />
             <Route path="/area-usuario" element={<AreaUsuario />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/admin" element={<ProtectedRoute requireAdmin><AdminDashboard /></ProtectedRoute>} />
