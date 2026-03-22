@@ -11,6 +11,7 @@ const footerLinks = {
   produtos: [
     { name: "Fórmulas", href: "/produtos?categoria=formulas" },
     { name: "Protocolos", href: "/protocolos" },
+    { name: "Treinos IA", href: "/treinos" },
     { name: "Programas", href: "/protocolos?tipo=programas" },
   ],
   recursos: [

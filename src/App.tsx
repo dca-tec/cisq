@@ -16,6 +16,7 @@ import ResetPassword from "./pages/ResetPassword";
 import Eventos from "./pages/Eventos";
 import Ebooks from "./pages/Ebooks";
 import Carrinho from "./pages/Carrinho";
+import Treinos from "./pages/Treinos";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/eventos" element={<Eventos />} />
             <Route path="/ebooks" element={<Ebooks />} />
             <Route path="/carrinho" element={<Carrinho />} />
+            <Route path="/treinos" element={<Treinos />} />
             <Route path="/area-usuario" element={<AreaUsuario />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/admin" element={<ProtectedRoute requireAdmin><AdminDashboard /></ProtectedRoute>} />

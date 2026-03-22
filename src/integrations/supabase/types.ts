@@ -301,6 +301,45 @@ export type Database = {
         }
         Relationships: []
       }
+      exercises: {
+        Row: {
+          category: string
+          created_at: string
+          description: string | null
+          difficulty: string | null
+          equipment: string | null
+          gif_url: string | null
+          id: string
+          muscle_group: string
+          muscle_highlight_url: string | null
+          name: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description?: string | null
+          difficulty?: string | null
+          equipment?: string | null
+          gif_url?: string | null
+          id?: string
+          muscle_group: string
+          muscle_highlight_url?: string | null
+          name: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          difficulty?: string | null
+          equipment?: string | null
+          gif_url?: string | null
+          id?: string
+          muscle_group?: string
+          muscle_highlight_url?: string | null
+          name?: string
+        }
+        Relationships: []
+      }
       glossary_terms: {
         Row: {
           created_at: string
@@ -558,6 +597,45 @@ export type Database = {
         }
         Relationships: []
       }
+      subscription_plans: {
+        Row: {
+          created_at: string
+          description: string | null
+          features: string[] | null
+          id: string
+          is_active: boolean
+          name: string
+          price: number
+          slug: string
+          tier: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          features?: string[] | null
+          id?: string
+          is_active?: boolean
+          name: string
+          price?: number
+          slug: string
+          tier?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          features?: string[] | null
+          id?: string
+          is_active?: boolean
+          name?: string
+          price?: number
+          slug?: string
+          tier?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       user_purchases: {
         Row: {
           created_at: string
@@ -610,6 +688,121 @@ export type Database = {
           created_at?: string
           id?: string
           role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_subscriptions: {
+        Row: {
+          created_at: string
+          expires_at: string | null
+          id: string
+          plan_id: string
+          starts_at: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          plan_id: string
+          starts_at?: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          plan_id?: string
+          starts_at?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_subscriptions_plan_id_fkey"
+            columns: ["plan_id"]
+            isOneToOne: false
+            referencedRelation: "subscription_plans"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      workout_chat_messages: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          role: string
+          user_id: string
+          workout_plan_id: string | null
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          role: string
+          user_id: string
+          workout_plan_id?: string | null
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          role?: string
+          user_id?: string
+          workout_plan_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "workout_chat_messages_workout_plan_id_fkey"
+            columns: ["workout_plan_id"]
+            isOneToOne: false
+            referencedRelation: "workout_plans"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      workout_plans: {
+        Row: {
+          created_at: string
+          duration_weeks: number
+          goal: string
+          id: string
+          is_active: boolean
+          level: string
+          name: string
+          plan_data: Json
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          duration_weeks?: number
+          goal: string
+          id?: string
+          is_active?: boolean
+          level?: string
+          name: string
+          plan_data?: Json
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          duration_weeks?: number
+          goal?: string
+          id?: string
+          is_active?: boolean
+          level?: string
+          name?: string
+          plan_data?: Json
+          updated_at?: string
           user_id?: string
         }
         Relationships: []
