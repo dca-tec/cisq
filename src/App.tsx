@@ -16,6 +16,7 @@ import ResetPassword from "./pages/ResetPassword";
 import Eventos from "./pages/Eventos";
 import Ebooks from "./pages/Ebooks";
 import Carrinho from "./pages/Carrinho";
+import Treinos from "./pages/Treinos";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
