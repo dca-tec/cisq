@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, Clock, FileText, Lock, Star } from "lucide-react";
+import { ArrowRight, Clock, FileText, Sparkles, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -13,10 +13,8 @@ const protocols = [
     id: 1,
     name: "Protocolo Reset 7 Dias",
     duration: "7 dias",
-    type: "Iniciante",
-    description: "Programa introdutório para reequilíbrio básico. Ideal para quem está começando sua jornada de autoconhecimento biológico.",
-    price: 97,
-    isPaid: true,
+    type: "Etapa 1 — Iniciante",
+    description: "Programa introdutório para reequilíbrio básico. Primeira etapa da jornada — fundação do autoconhecimento biológico.",
     image: imgReset,
     features: ["Guia diário completo", "Lista de alimentos", "Práticas de consciência", "Suporte por email"]
   },
@@ -24,10 +22,8 @@ const protocols = [
     id: 2,
     name: "Detox Celular 14 Dias",
     duration: "14 dias",
-    type: "Intermediário",
-    description: "Programa aprofundado para suporte aos processos naturais de desintoxicação e regeneração celular.",
-    price: 197,
-    isPaid: true,
+    type: "Etapa 2 — Intermediário",
+    description: "Aprofundamento dos processos de desintoxicação. Continuidade natural após a etapa de reset.",
     image: imgDetox,
     features: ["Protocolo detalhado", "Receitas exclusivas", "Monitoramento de sintomas", "Consulta de orientação"]
   },
@@ -35,10 +31,8 @@ const protocols = [
     id: 3,
     name: "Transformação 30 Dias",
     duration: "30 dias",
-    type: "Avançado",
-    description: "O programa mais completo para mudança profunda de padrões biológicos e comportamentais.",
-    price: 397,
-    isPaid: true,
+    type: "Etapa 3 — Avançado",
+    description: "Mudança profunda de padrões biológicos e comportamentais. Etapa final da jornada estruturada.",
     image: imgTransformacao,
     features: ["Programa completo", "Acompanhamento semanal", "Protocolos personalizados", "Comunidade exclusiva"]
   },
