@@ -25,10 +25,11 @@ const levels = [
 
 interface WorkoutGeneratorProps {
   onPlanGenerated: (plan: WorkoutPlan) => void;
+  initialGoal?: string;
 }
 
-export function WorkoutGenerator({ onPlanGenerated }: WorkoutGeneratorProps) {
-  const [goal, setGoal] = useState("");
+export function WorkoutGenerator({ onPlanGenerated, initialGoal = "" }: WorkoutGeneratorProps) {
+  const [goal, setGoal] = useState(initialGoal);
   const [level, setLevel] = useState("");
   const [daysPerWeek, setDaysPerWeek] = useState("5");
   const [sessionDuration, setSessionDuration] = useState("60");

@@ -35,6 +35,7 @@ export function UserDashboard() {
   const [appointments, setAppointments] = useState<any[]>([]);
   const [purchases, setPurchases] = useState<any[]>([]);
   const [trainingView, setTrainingView] = useState<TrainingView>("modalities");
+  const [selectedModality, setSelectedModality] = useState<string>("");
   const [generatedPlan, setGeneratedPlan] = useState<WorkoutPlan | null>(null);
 
   useEffect(() => {
@@ -107,7 +108,10 @@ export function UserDashboard() {
                   {trainingModalities.map((m) => (
                     <button
                       key={m.id}
-                      onClick={() => setTrainingView("generator")}
+                      onClick={() => {
+                        setSelectedModality(m.id);
+                        setTrainingView("generator");
+                      }}
                       className="group relative overflow-hidden rounded-sm bg-card text-left transition-all hover:shadow-elevated"
                     >
                       <div className="aspect-[4/3] overflow-hidden">
@@ -132,6 +136,7 @@ export function UserDashboard() {
 
               {trainingView === "generator" && (
                 <WorkoutGenerator
+                  initialGoal={selectedModality}
                   onPlanGenerated={(plan) => {
                     setGeneratedPlan(plan);
                     setTrainingView("plan");
