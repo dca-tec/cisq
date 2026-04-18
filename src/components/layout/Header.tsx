@@ -10,11 +10,9 @@ const navigation = [
   { name: "Instituto", href: "/sobre" },
   { name: "Produtos", href: "/produtos" },
   { name: "Protocolos", href: "/protocolos" },
-  { name: "Treinos", href: "/treinos" },
-  { name: "E-books", href: "/ebooks" },
   { name: "Eventos", href: "/eventos" },
   { name: "Conhecimento", href: "/conhecimento" },
-  { name: "Agendamento", href: "/agendamento" },
+  { name: "Planos", href: "/planos" },
 ];
 
 export function Header() {
@@ -73,7 +71,10 @@ export function Header() {
               </Button>
             )}
             <Button variant="default" size="sm" className="ml-2" asChild>
-              <Link to="/agendamento"><Calendar className="h-4 w-4 mr-2" />Agendar</Link>
+              <Link to={user ? "/area-usuario" : "/planos"}>
+                <Calendar className="h-4 w-4 mr-2" />
+                {user ? "Minha Área" : "Assinar"}
+              </Link>
             </Button>
           </div>
 
@@ -113,8 +114,9 @@ export function Header() {
                       </Link>
                     </Button>
                     <Button variant="default" className="w-full" asChild>
-                      <Link to="/agendamento" onClick={() => setIsOpen(false)}>
-                        <Calendar className="h-5 w-5 mr-3" />Agendar Consulta
+                      <Link to={user ? "/area-usuario" : "/planos"} onClick={() => setIsOpen(false)}>
+                        <Calendar className="h-5 w-5 mr-3" />
+                        {user ? "Minha Área" : "Assinar Plano"}
                       </Link>
                     </Button>
                     {user && (
