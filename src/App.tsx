@@ -17,6 +17,7 @@ import Eventos from "./pages/Eventos";
 import Ebooks from "./pages/Ebooks";
 import Carrinho from "./pages/Carrinho";
 import Treinos from "./pages/Treinos";
+import Planos from "./pages/Planos";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
@@ -34,12 +35,13 @@ const App = () => (
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/produtos" element={<Produtos />} />
             <Route path="/protocolos" element={<Protocolos />} />
-            <Route path="/agendamento" element={<Agendamento />} />
+            <Route path="/agendamento" element={<ProtectedRoute><Agendamento /></ProtectedRoute>} />
             <Route path="/conhecimento" element={<Conhecimento />} />
             <Route path="/eventos" element={<Eventos />} />
-            <Route path="/ebooks" element={<Ebooks />} />
+            <Route path="/ebooks" element={<ProtectedRoute><Ebooks /></ProtectedRoute>} />
             <Route path="/carrinho" element={<Carrinho />} />
-            <Route path="/treinos" element={<Treinos />} />
+            <Route path="/treinos" element={<ProtectedRoute><Treinos /></ProtectedRoute>} />
+            <Route path="/planos" element={<Planos />} />
             <Route path="/area-usuario" element={<AreaUsuario />} />
             <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/admin" element={<ProtectedRoute requireAdmin><AdminDashboard /></ProtectedRoute>} />
