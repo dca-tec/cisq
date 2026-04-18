@@ -68,43 +68,14 @@ Retorne APENAS o JSON do plano, sem texto adicional, sem markdown.`;
         }
       );
 
+      const data = await resp.json();
       if (!resp.ok) {
-        const err = await resp.json();
-        throw new Error(err.error || "Erro ao gerar treino");
+        throw new Error(data.error || "Erro ao gerar treino");
       }
 
-      // Stream the response
-      const reader = resp.body?.getReader();
-      const decoder = new TextDecoder();
-      let fullText = "";
+      const plan = data.plan as WorkoutPlan;
+      if (!plan?.weeks?.length) throw new Error("Plano retornado vazio");
 
-      if (reader) {
-        let done = false;
-        while (!done) {
-          const { value, done: d } = await reader.read();
-          done = d;
-          if (value) {
-            const chunk = decoder.decode(value, { stream: true });
-            const lines = chunk.split("\n");
-            for (const line of lines) {
-              if (!line.startsWith("data: ") || line.trim() === "") continue;
-              const jsonStr = line.slice(6).trim();
-              if (jsonStr === "[DONE]") continue;
-              try {
-                const parsed = JSON.parse(jsonStr);
-                const content = parsed.choices?.[0]?.delta?.content;
-                if (content) fullText += content;
-              } catch { /* partial */ }
-            }
-          }
-        }
-      }
-
-      // Extract JSON from response
-      const jsonMatch = fullText.match(/\{[\s\S]*\}/);
-      if (!jsonMatch) throw new Error("Não foi possível extrair o plano");
-
-      const plan = JSON.parse(jsonMatch[0]) as WorkoutPlan;
       onPlanGenerated(plan);
       toast({ title: "Treino gerado com sucesso!", description: plan.name });
     } catch (error) {
